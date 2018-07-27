@@ -23,6 +23,13 @@ jobs:
       TERM: dumb
 
     steps:
+
+      - run:
+        name: Install AWS CLI
+          command: |
+            sudo apt-get install -y python-pip libyaml-dev python-dev jq
+            sudo pip install awscli
+
       - checkout
 
       # Download and cache dependencies
@@ -40,9 +47,7 @@ jobs:
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
 
-  dependencies:
-    override:
-      - sudo pip install awscli
+
 
   deploy:
       machine:
