@@ -4,10 +4,6 @@
 #
 version: 2
 
-dependencies:
-    override:
-        - sudo pip install awscli
-
 jobs:
   build:
     docker:
