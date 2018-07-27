@@ -51,10 +51,8 @@ jobs:
             sudo pip install awscli
       - checkout
       - run:
-          name: Register Task
+          name: Deploy to AWS
           command: |
-            export AWS_ACCESS_KEY_ID=$AWS_KEY
-            export AWS_SECRET_ACCESS_KEY=$AWS_SECRET
             aws s3 sync ~/repo s3://aw-instaritter-talg-service --delete
 
 workflows:
