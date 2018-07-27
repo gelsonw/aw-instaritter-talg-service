@@ -51,7 +51,7 @@ jobs:
             sudo pip install awscli
       - checkout
       - run:
-          name: Deploy to AWS
+          name: Deploy to AWS S3
           command: |
             aws s3 sync ~/repo s3://aw-instaritter-talg-service --delete
 
