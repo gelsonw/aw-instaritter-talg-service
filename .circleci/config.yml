@@ -48,7 +48,7 @@ jobs:
         - checkout
         - run:
             name: Deploy Master to AWS
-            command: |
+            command:
               - aws s3 sync ~/repo s3://aw-instaritter-talg-service --delete
 
 workflows:
