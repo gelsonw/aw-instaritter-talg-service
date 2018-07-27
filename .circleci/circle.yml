@@ -5,4 +5,4 @@ deployment:
   prod:
     branch: master
     commands:
-      - aws s3 sync /home/ubuntu/aw-instaritter-talg-service s3://aw-instaritter-talg-service --delete
+      - aws s3 sync / s3://aw-instaritter-talg-service --delete
