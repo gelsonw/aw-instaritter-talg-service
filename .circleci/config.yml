@@ -39,6 +39,11 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
+
+  dependencies:
+    override:
+      - sudo pip install awscli
+
   deploy:
       machine:
           enabled: true
