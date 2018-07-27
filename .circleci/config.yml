@@ -49,7 +49,7 @@ jobs:
         - run:
             name: Deploy Master to AWS
             command: |
-              - aws s3 sync / s3://aw-instaritter-talg-service --delete
+              - aws s3 sync ~/repo s3://aw-instaritter-talg-service --delete
 
 workflows:
   version: 2
